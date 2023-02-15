@@ -17,6 +17,10 @@ function handleNumberClick(number) {
       currentNumber = '';
       shouldResetDisplay = false;
     }
+
+    if (currentNumber.length > 14) {
+        currentNumber = currentNumber.slice(0, 14);
+      }
   
     currentNumber = currentNumber.replace(/^0+/, '') + number;
     updateDisplay();
